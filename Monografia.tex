@@ -266,7 +266,7 @@ Monografia apresentada à Escola de Artes, Ciências e Humanidades da Universida
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
-% \pretextual
+\pretextual
 
 % ---
 % Capa
@@ -430,7 +430,7 @@ GAGO, Igor Antun da Costa. \textbf{Os efeitos do agendamento midiático nas rede
 
 A hipótese do agendamento propõe a ideia de que grandes veículos midiáticos, apesar de não influenciarem diretamente \textit{o que} as pessoas pensam sobre determinadas questões, possuem o grande poder de determinar \textit{quais} serão as questões de destaque na sociedade em um determinado momento, em detrimento de outras. No entanto, com a adoção em massa das mídias sociais, o público é exposto a uma variedade maior de fontes de notícia e possui uma influência direta na importância que é dada a um tema. O presente projeto busca entender, através de um estudo longitudinal e da aplicação de técnicas automatizadas de raspagem de dados em massa, a correlação entre a importância dada pela agenda midiática em portais jornalísticos e a que é dada pela agenda pública, no contexto das eleições presidenciais de 2022 no Brasil.
 
-Palavras-chaves: Teoria do agendamento. Mídia. Redes sociais. Agenda pública. Eleições de 2022 no Brasil.
+Palavras-chaves: Teoria do agendamento. Mídia. Redes sociais. Agenda pública. Eleições.
 \end{resumo}
 
 % resumo em inglês
@@ -467,7 +467,7 @@ GAGO, Igor Antun da Costa. \textbf{The effects of media agenda-setting on social
 
 Write here the English version of your ``Resumo''. Example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text, example text.
 
-Keywords: Agenda-setting. News media. Social networks. Public agenda. 2022 Brazilian general election.
+Keywords: Agenda-setting. Media. Social networks. Public agenda. Elections.
 \end{otherlanguage*}
 \end{resumo}
 
@@ -578,6 +578,38 @@ Keywords: Agenda-setting. News media. Social networks. Public agenda. 2022 Brazi
 %
 %-------------------------------------------------------------------------
 \chapter{Introdução}
+A hipótese do agendamento (\textit{agenda-setting}) propõe a ideia de que grandes veículos midiáticos, apesar de não influenciarem diretamente \textit{o que} as pessoas pensam sobre determinadas questões, possuem o grande poder de determinar \textit{quais} serão as questões de destaque na sociedade em um determinado momento, em detrimento de outras \cite{mccombs}. Com a adoção em massa das mídias sociais, no entanto, o público geral é exposto a uma variedade crescente de fontes de notícias, sejam essas legítimas ou falsas \cite{sterrett}.  
+
+A decisão editorial, agora decentralizada, é diretamente influenciada pelo engajamento dado por usuários nas redes. Essa configuração pode gerar, em determinadas questões e momentos, um descasamento entre o que é priorizado no debate público e o que é destacado pela mídia, como observado nas eleições de 2010 por \citeonline{nunomura}.
+
+O presente trabalho busca entender, através de um estudo longitudinal e da aplicação de técnicas automatizadas de raspagem de dados, a correlação entre a importância dada pela agenda midiática em portais jornalísticos e a que é atribuída pela agenda pública nas redes sociais, no contexto das eleições presidenciais de 2022 no Brasil.
+
+
+\section{Justificativa para a pesquisa}
+Ao ditar quais serão as questões de maior relevância para o debate público, um agente efetivamente limita as opções de temas que serão tratados na sociedade e suas políticas públicas. Estudar o impacto do agendamento nas plataformas digitais sociais e midiáticas, portanto, é uma importante ferramenta para entendermos sua influência no contexto da mudança social.
+
+Através da aplicação de técnicas de raspagem de dados e automação, é possível acompanhar em tempo real os tópicos noticiados nos jornais digitais e os que estão em pauta nas redes sociais. Uma vez agregados, pode-se analisar os dados obtidos por diferentes perspectivas, buscando padrões e correlações entre suas agendas.
+
+
+\section{Proposição da pesquisa}
+O presente estudo de caso possui a intenção de analisar os efeitos do agendamento midiático no contexto das eleições presidenciais no Brasil em 2022. Através da observação conjunta do destaque dado a uma publicação nos cinco principais portais jornalísticos do país (\textit{Estadão}, \textit{Folha de S. Paulo}, \textit{g1}, \textit{UOL} e \textit{Veja}) e o engajamento obtido por estas nas redes sociais \textit{Facebook} e \textit{Twitter}, pretende-se observar a eventual correlação entre as agendas.
+
+
+\section{Objetivos}
+Teste
+
+
+\section{Método}
+A fim de comparar a saliência dada a um determinado tema nos portais jornalísticos e nas redes sociais, é necessário primeiro obter os dados brutos necessários e tratá-los de forma a possibilitar a análise. Para cada meio, a obtenção dos dados se deu de forma distinta.
+
+Para a observação dos portais jornalísticos, foi desenvolvido um \textit{script} automatizado, executado em intervalos regulares de 1 hora, que aplica técnicas de raspagem de dados objetivando o armazenamento histórico das matérias publicadas na página inicial de cada um dos cinco principais portais jornalísticos do país: \textit{Estadão}, \textit{Folha de S. Paulo}, \textit{g1}, \textit{UOL} e \textit{Veja}. A cada matéria identificada, são coletadas informações como seu endereço de acesso, posição hierárquica na tela e total de horas em que se manteve visível.
+
+Na rede social Twitter foi utilizada sua \textit{API} pública \cite{twitterapi}, que permite a busca de publicações específicas e análise das interações obtidas por estas. A busca foi então utilizada para encontrar publicações (\textit{tweets}) que referenciem o \textit{link} das matérias identificadas pelo \textit{script} acima. Os metadados de engajamento, como "curtidas", respostas e republicações (\textit{retweets}) são então armazenados.
+
+Os dados do Facebook, por sua vez, foram obtidos com o uso da ferramenta CrowdTangle, que oferece acesso ao arquivo histórico de publicações do Facebook e também a seus dados atualizados. Através da mesma, é possível buscar publicações que contenham um \textit{link} específico, e assim como com o Twitter, armazenar suas métricas de engajamento.
+
+
+\section{Template}
 Este \textit{template} apresenta as regras básicas para a elaboração do trabalho segundo as normas ABNT. Estas regras devem ser seguidas rigorosamente a fim de que o mesmo possa receber sua ficha catalográfica e ser posteriormente aprovado para publicação na Biblioteca Digital de Teses e Dissertações (BDTD) da USP. Qualquer desvio realizado nas configurações e recomendações deste \textit{template} poderá causar atrasos nesses processos, uma vez que o texto precisará ser corrigido antes. 
 
 Além das regras básicas previstas aqui, solicita-se consultar outros detalhes da norma ABNT sempre que se desejar inserir ou configurar algum elemento não previsto aqui. Ou seja, mesmo que este \textit{template} não preveja as demais regras ABNT, por ser uma visão simplificada, ainda assim elas precisam ser seguidas. O anexo \ref{anexoA} deste documento apresenta um resumo das normas ABNT, mas ainda assim também não completo.
@@ -660,24 +692,6 @@ A tabela \ref{tab:ExemploDeTabela1} é um exemplo de como apresentar tabelas de 
 \end{table}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-A seguir é apresentado um exemplo de lista de marcadores de apenas um nível (se você finalizar cada item da lista com ponto e vírgula, elas devem ser iniciadas com letra minúsculas; se você finalizar cada item da lista com ponto, elas devem ser iniciadas com letra maiúsculas):
-\begin{itemize}
-	\item sentença A;
-	\item sentença B mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto;
-	\item sentença C;
-	\item sentença D mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto.
-\end{itemize}
-
-A seguir é apresentado um exemplo de lista de numeração de apenas um nível (se você finalizar cada item da lista com ponto e vírgula, elas devem ser iniciadas com letra minúsculas; se você finalizar cada item da lista com ponto, elas devem ser iniciadas com letra maiúsculas):
-\begin{enumerate}
-	\item Sentença A.
-	\item Sentença B mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto.
-	\item Sentença C.
-	\item Sentença D mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto mais texto.
-	\item Sentença E.
-	\item Sentença F.
-\end{enumerate}
 
 A seguir é apresentado um exemplo de lista de marcadores vários níveis (se você finalizar cada item da lista com ponto e vírgula, elas devem ser iniciadas com letra minúsculas; se você finalizar cada item da lista com ponto, elas devem ser iniciadas com letra maiúsculas):
 \begin{itemize}
@@ -1030,7 +1044,8 @@ A figura \ref{fig:figura-exemplo5} é um exemplo de como apresentar ilustraçõe
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
-\chapter{Outra seção primária - sugestão ``Revisão bibliográfica''}
+
+\chapter{Revisão bibliográfica}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo\footnote{text}\footnote{text}\footnote{text}.
 
@@ -1154,10 +1169,6 @@ O algoritmo \ref{alg:algoritmo-exemplo3} é um exemplo de como apresentar ilustr
 \end{algorithm}
 
 
-\subsection{Outra seção terciária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
 \subsection{Mais uma seção terciária}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
@@ -1196,13 +1207,7 @@ Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
-\section{Mais uma seção secundária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\chapter{Mais uma seção primária - sugestão ``Método''}
+\chapter{Método}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
@@ -1215,6 +1220,24 @@ Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
 \subsection{Uma seção terciária}
+
+Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
+
+\subsection{Mais uma seção terciária}
+
+Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
+
+Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
+
+\chapter{Resultados e discussão}
+
+Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
+
+Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
+
+\section{Uma seção secundária}
+
+Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
@@ -1232,53 +1255,6 @@ Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de
 \section{Outra seção secundária}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section{Mais uma seção secundária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\chapter{Mais uma outra seção primária -   - sugestão ``Resultados e discussão''}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section{Uma seção secundária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection{Uma seção terciária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-
-\subsection{Outra seção terciária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection{Mais uma seção terciária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section{Outra seção secundária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section{Mais uma seção secundária}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
@@ -1300,10 +1276,6 @@ Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
-\subsection{Outra seção terciária}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
 \subsection{Mais uma seção terciária}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
@@ -1313,12 +1285,6 @@ Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de
 \section{Outra seção secundária}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section{Mais uma seção secundária}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
@@ -1386,78 +1352,9 @@ Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
 
-\subsection*{1.3 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
 \section*{2 Exemplo de seção de apêndice não apresentada no sumário}
 
 Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{3 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-
-\chapter{Exemplo de apêndice}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{1 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection*{1.1 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection*{1.2 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection*{1.3 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{2 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{3 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-
-\chapter{Exemplo de apêndice}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{1 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection*{1.1 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection*{1.2 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\subsection*{1.3 Exemplo de subseção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{2 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-\section*{3 Exemplo de seção de apêndice não apresentada no sumário}
-
-Texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo, texto de exemplo.
-
-
-
 
 \end{apendicesenv}
 % ---
